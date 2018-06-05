@@ -1,0 +1,5 @@
+# ui
+mainTablePath: 'assets/maintable.html'
+
+# others
+tokenPath: 'lib/token'
