@@ -17,13 +17,16 @@ NL3D.initUI = function() {
 
     $("#btnSpeak").button();
     $("#btnSpeak").click(function(e) {
-      NL3D.initWatson(NL3D.keywords, function(keywords) {
-        NL3D.actionFrame = NL3D.actionFrame || {};
-        var input = nlp(keywords);
-        // log("verb: " + input.verbs().out("text"));
-        // log("number: " + input.values().out("text"));
-        log(input.out("terms"));
-      });
+
+      XAC.startListening();
+
+      // NL3D.initWatson(NL3D.keywords, function(keywords) {
+      //   NL3D.actionFrame = NL3D.actionFrame || {};
+      //   var input = nlp(keywords);
+      //   // log("verb: " + input.verbs().out("text"));
+      //   // log("number: " + input.values().out("text"));
+      //   log(input.out("terms"));
+      // });
     });
   });
 };
