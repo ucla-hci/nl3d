@@ -17,7 +17,8 @@ NL3D.initUI = function() {
 
     $("#btnSpeak").button();
     $("#btnSpeak").click(function(e) {
-      NL3D.initWatson([], function(keywords) {
+      NL3D.initWatson(NL3D.keywords, function(keywords) {
+        NL3D.actionFrame = NL3D.actionFrame || {};
         var input = nlp(keywords);
         // log("verb: " + input.verbs().out("text"));
         // log("number: " + input.values().out("text"));
@@ -48,7 +49,7 @@ NL3D.initWatson = function(keywords, callback) {
 
     if (NL3D.keywords != undefined && NL3D.keywords.length > 0) {
       options.keywords = NL3D.keywords;
-      options.keywords_threshold = 0.001;
+      options.keywords_threshold = 0.1;
     }
 
     NL3D.stream = WatsonSpeech.SpeechToText.recognizeMicrophone(options);

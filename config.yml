@@ -3,3 +3,9 @@ mainTablePath: 'assets/maintable.html'
 
 # others
 tokenPath: 'lib/token'
+
+# keywords
+# keywords:
+#   - 'rotate'
+#   - 'translate'
+#   - 'scale'
